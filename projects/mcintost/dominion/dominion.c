@@ -67,7 +67,7 @@ void adventurer_card(int currentPlayer, struct gameState *state, int handPos)
 //Village Function
 void village_card(int currentPlayer, struct gameState *state, int handPos)
 {
-	//+1 Card
+	//+1 Card //Removed the extra card draw. 
 	//drawCard(currentPlayer, state);
 
 	//+2 Actions
@@ -83,7 +83,7 @@ void greathall_card(int currentPlayer, struct gameState *state, int handPos)
 	//+1 Card
 	drawCard(currentPlayer, state);
 
-	//+1 Actions
+	//+1 Actions //Removed the extra action provided.
 	//state->numActions++;
 
 	//discard card from hand
@@ -1307,6 +1307,7 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
   return 0;
 }
 
+//Used in unit test One.
 int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
 {
   //Note: supplyPos is enum of choosen card
