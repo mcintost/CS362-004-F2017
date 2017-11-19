@@ -11,28 +11,28 @@ void randomKingdomCards(int kCardsSelected[], int testCard)
 {
     int selectableKCards = NUM_TOTAL_K_CARDS - 7;
     int i;
-    int tmpKCards[selectableKCards]; // -7 for unselectable kingdom cards
+    int tmpCards[selectableKCards]; 
     int swapCardIndex;
-    int tmpSwapCard;
+    int tmpSwap;
     int addedTestCard = 0;
     
     for(i = 0; i < selectableKCards; i++)
     {
-        tmpKCards[i] = i + 7;
+        tmpCards[i] = i + 7;
     }
     
     for(i = 0; i < selectableKCards; i++)
     {
         swapCardIndex = rand() % selectableKCards;
-        tmpSwapCard = tmpKCards[i];
-        tmpKCards[i] = tmpKCards[swapCardIndex];
-        tmpKCards[swapCardIndex] = tmpSwapCard;
+        tmpSwap = tmpCards[i];
+        tmpCards[i] = tmpCards[swapCardIndex];
+        tmpCards[swapCardIndex] = tmpSwap;
     }
     
     for(i = 0; i < 10; i++)
     {
         
-        kCardsSelected[i] = tmpKCards[i];
+        kCardsSelected[i] = tmpCards[i];
         if(kCardsSelected[i] == testCard)
         {
             addedTestCard = 1;
@@ -62,14 +62,14 @@ void populateDrawableCards(int drawCards[], int kingdomCards[])
 void generateRandomHand(int hand[], int kingdomCards[], int testCard, int *handPos)
 {
     int i;
-    int drawableCards[13];
+    int drawable[13];
     int testCardAdded = 0;
     
-    populateDrawableCards(drawableCards, kingdomCards);
+    populateDrawableCards(drawable, kingdomCards);
     
     for(i = 0; i < 5; i++)
     {
-        hand[i] = drawableCards[rand() % 13];
+        hand[i] = drawable[rand() % 13];
         if(hand[i] == testCard)
         {
             testCardAdded = 1;

@@ -43,8 +43,8 @@ void adventurer_card(int currentPlayer, struct gameState *state, int handPos)
 	int cardDrawn;
 	int temphand[MAX_HAND];
 	int z = 0;
-	//changed the number of treasures drawn from 2 to 1. 
-	while (drawntreasure<1) {
+	//changed the number of treasures drawn from 2 to 1. (Fixed the bug returning the value to 2.)
+	while (drawntreasure<2) {
 		if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck
 			shuffle(currentPlayer, state);
 		}

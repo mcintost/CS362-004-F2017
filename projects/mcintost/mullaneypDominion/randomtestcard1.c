@@ -136,7 +136,7 @@ int checkSmithyEffect(struct gameState *game, struct gameState *backupGame, int 
             == (game->discardCount[0]));
 
 	#if (NOISY_TEST == 1)	
-    printf("Expected P1 discard: %d  Reported P1discard: %d"
+    printf("Expected P1 discard: %d  Reported P1 discard: %d"
             ,backupGame->discardCount[0]
             ,game->discardCount[0]);
     #endif 

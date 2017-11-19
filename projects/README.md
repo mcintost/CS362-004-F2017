@@ -1,1 +1,2 @@
-The projects directory should contain your onid (e.g., aburasa) folder 
+mcintost This is my assignment 2 submission
+

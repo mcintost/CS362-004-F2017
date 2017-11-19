@@ -1,0 +1,82 @@
+Title: Smithy Card draws two extra cards.
+
+Class: Serious Bug
+
+Date: 11/19/2017
+Reported By: Thomas McIntosh
+Email: mcintost@oregonstate.edu
+
+Product:  dominion.c	Version: Github assignment-2 branch
+Platform: GNU bash 	Version: 4.2.46(1)
+
+Is it reproducible: Yes, always.
+
+Description
+==========
+Smithy card when played, adds two more cards to the player's hand then it was supposed to. 
+
+Steps to Produce/Reproduce
+-------------------------
+1) Properly intialize a game with 2 players.
+2) Have player one play smithy from hand.
+3) Check the number of cards in player ones hand. It will have 2 more than it shoud
+4) If bug does not appear then verify that there are enough cards in the players deck to draw as many cards as the smithy is trying to draw.
+
+Expected Results
+----------------
+Card should cause the player to draw 3 cards.
+
+Actual Results
+--------------
+Player draws five cards.
+
+Workarounds
+-----------
+None
+
+Attachments
+-----------
+unittestresults.out
+randomtestcard1.out
+
+**********************************************
+
+Title: Village cards provides too many actions when played.
+
+Class: Serious Bug
+
+Date: 11/19/2017
+Reported By: Thomas McIntosh
+Email: mcintost@oregonstate.edu
+
+Product:  dominion.c    Version: Github assignment-2 branch
+Platform: GNU bash      Version: 4.2.46(1)
+
+Is it reproducible: Yes, always.
+
+Description
+==========
+
+The Village card is supposed to give 2 additional actions to the player that plays it. The card is actually giving +3 actions instead.
+
+Steps to Produce/Reproduce
+-------------------------
+1) Properly intialize a game with 2 players.
+2) Have player one play village from hand.
+3) Check the value game.numActions should = 2 will equal 3.
+
+Expected Results
+----------------
+Card should cause the player to have two actions left. 
+
+Actual Results
+--------------
+Player has three actions left. 
+
+Workarounds
+-----------
+None
+
+Attachments
+-----------
+unittestresults.out
